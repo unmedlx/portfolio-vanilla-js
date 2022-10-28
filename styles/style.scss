@@ -5,6 +5,7 @@
   list-style: none;
 }
 
+/* Colours */
 :root {
   --color-primary: #181a18;
   --color-secondary: #e62a34;
@@ -54,7 +55,7 @@ section {
 
 .section {
   transform: translateY(-100%) scale(0);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: var(--color-primary);
 }
 
@@ -107,6 +108,10 @@ section {
     }
   }
   .control {
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background-color: var(--color-grey-3);
+    }
     padding: 1rem;
     cursor: pointer;
     background-color: var(--color-grey-4);
@@ -126,7 +131,7 @@ section {
   }
 }
 
-/* Header Content or HOME Sec */
+/* HOME */
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -182,6 +187,170 @@ section {
     }
   }
 }
+
+/* ABOUT */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3.5rem 0;
+  .right-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    .about-item {
+      border: 1px solid var(--color-grey-5);
+      border-radius: 5px;
+      transition: all 0.4s ease-in-out;
+      box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+      &:hover {
+        cursor: default;
+        transform: translateY(-5px);
+        border: 1px solid var(--color-secondary);
+        box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.32);
+      }
+      .about-text {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        .large-text {
+          font-size: 3rem;
+          font-weight: 700;
+          color: var(--color-secondary);
+        }
+        .small-text {
+          padding-left: 3rem;
+          position: relative;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          color: var(--color-grey-1);
+          letter-spacing: 2px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 2rem;
+            height: 2px;
+            background-color: var(--color-grey-5);
+          }
+        }
+      }
+    }
+  }
+  .left-about {
+    padding-right: 5rem;
+    p {
+      line-height: 2rem;
+      padding: 1rem;
+      color: var(--color-grey-1);
+    }
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
+.skill-container {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .skill-title {
+    font-size: 2rem;
+    // text-transform: uppercase;
+  }
+  .skill-items {
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 0;
+    align-items: center;
+    .skill {
+      color: var(--color-grey-2);
+      font-size: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        color: var(--color-white);
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
+/* PROJECTS */
+.project-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  .project {
+    position: relative;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    .hover-item {
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-secondary);
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.4s ease-in-out;
+      h3 {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+      .links {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 55px;
+          height: 55px;
+          padding: 1rem;
+          border-radius: 50%;
+          background-color: var(--color-grey-6);
+          margin: 0 0.4rem;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            background-color: var(--color-white);
+            color: var(--color-black);
+          }
+        }
+      }
+    }
+  }
+  .project:hover .hover-item {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CONTACT */
 
 /* independent components */
 .btn-container {
