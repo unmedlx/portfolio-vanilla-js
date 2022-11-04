@@ -25,12 +25,6 @@ const pageSwitch = () => {
   allSections.addEventListener("click", (e) => {
     const id = e.target.dataset.id;
     if (id) {
-      //   //remove selected from the other button
-      //   secBtns.forEach((btn) => {
-      //     btn.classList.remove("active");
-      //   });
-      //   e.target.classList.add("active");
-
       //hide other sections
       console.log(sections);
       sections.forEach((section) => {
@@ -41,5 +35,11 @@ const pageSwitch = () => {
     }
   });
 };
+
+// Toggle Theme
+const themeBtn = document.querySelector(".theme-btn");
+themeBtn.addEventListener("click", () => {
+  allSections.classList.toggle("light-mode");
+});
 
 pageSwitch();
