@@ -1,0 +1,101 @@
+/* CONTACT */
+.contact-container {
+  display: flex;
+  padding-top: 3.5rem;
+  transition: all 0.4s ease-in-out;
+
+  .left-contact {
+    flex: 2;
+    h4 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 1rem 0;
+      line-height: 2rem;
+    }
+    .contact-info {
+      .contact-item {
+        display: flex;
+        align-items: center;
+        // transition: all 0.4s ease-in-out;
+        p {
+          margin: 0.3rem 0.4rem;
+          // transition: all 0.4s ease-in-out;
+        }
+        .icon {
+          // transition: all 0.4s ease-in-out;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 1rem;
+          border-radius: 50%;
+          i {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+          }
+        }
+        &:hover {
+          p {
+            border-bottom: 1px solid var(--color-grey-3);
+          }
+          .icon {
+            background-color: var(--color-grey-3);
+          }
+        }
+      }
+    }
+  }
+  .right-contact {
+    flex: 3;
+    margin-left: 3rem;
+    .input-control {
+      margin: 1.5rem 0;
+      input,
+      textarea {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 0.8rem 1.1rem;
+        outline: none;
+        border: none;
+        background-color: var(--color-grey-5);
+        width: 100%;
+        color: var(--color-white);
+        resize: none;
+      }
+    }
+    .submit-btn {
+      align-self: center;
+      justify-content: center;
+    }
+    .identity {
+      display: flex;
+      :last-child {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+    .right-contact {
+      margin-left: 0;
+      margin-top: 2.5rem;
+    }
+  }
+}
+@media screen and (max-width: 1080px) {
+  .contact-container {
+    flex-direction: column;
+    .right-contact {
+      margin-left: 0;
+      margin-top: 2.5rem;
+    }
+  }
+}
