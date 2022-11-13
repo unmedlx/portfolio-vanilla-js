@@ -44,6 +44,10 @@ header {
   overflow: hidden;
 }
 
+p {
+  transition: all 0.3s ease-in-out;
+}
+
 /* SECTIONS */
 section {
   min-height: 100vh;
