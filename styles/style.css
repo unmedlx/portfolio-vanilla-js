@@ -54,7 +54,7 @@ a {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -66,7 +66,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
+  padding: 4rem 20%;
 }
 
 .section {
@@ -162,7 +162,7 @@ section {
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  min-height: 100vh;
 }
 .header-content .left-header {
   display: flex;
@@ -293,7 +293,7 @@ section {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem 0;
+  gap: 3rem 1rem;
   align-items: center;
 }
 .skill-container .skill-items .skill {
@@ -396,6 +396,7 @@ section {
 .contact-container {
   display: flex;
   padding-top: 3.5rem;
+  transition: all 0.4s ease-in-out;
 }
 .contact-container .left-contact {
   flex: 2;
@@ -412,14 +413,11 @@ section {
 .contact-container .left-contact .contact-info .contact-item {
   display: flex;
   align-items: center;
-  transition: all 0.4s ease-in-out;
 }
 .contact-container .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0.4rem;
-  transition: all 0.4s ease-in-out;
 }
 .contact-container .left-contact .contact-info .contact-item .icon {
-  transition: all 0.4s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
   padding: 1rem;
@@ -534,7 +532,7 @@ section {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: var(--color-grey-4);
+  background-color: var(--color-grey-5);
   cursor: pointer;
   position: fixed;
   display: flex;
@@ -550,4 +548,113 @@ section {
   font-size: 1.4rem;
   color: var(--color-grey-2);
   pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0 !important;
+    min-height: 100vh !important;
+  }
+  header .right-header {
+    padding: 0 !important;
+  }
+  .section {
+    padding: 8rem 8% 4rem 8%;
+  }
+  .controls {
+    z-index: 1;
+    position: absolute;
+    top: 2%;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
+  .theme-btn {
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    top: 4.5%;
+  }
+  .header-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem;
+    padding: 8rem 5% 4rem 5%;
+  }
+  .left-header .h-shape {
+    display: none;
+  }
+  .right-header {
+    grid-row: 1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+  }
+  .header-content .left-header .image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  .skill-container .skill-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .main-title h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  .skill-container .skill-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
