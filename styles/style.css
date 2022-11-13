@@ -44,6 +44,10 @@ header {
   overflow: hidden;
 }
 
+p {
+  transition: all 0.3s ease-in-out;
+}
+
 /* SECTIONS */
 section {
   min-height: 100vh;
@@ -212,6 +216,7 @@ section {
 }
 
 .main-title {
+  transition: all 0.3s ease-in-out;
   text-align: center;
 }
 .main-title h2 {
@@ -261,7 +266,7 @@ section {
     z-index: 3;
     width: 50px;
     height: 50px;
-    top: 4.5%;
+    top: 90%;
   }
 }
 /* Pages */
@@ -581,7 +586,7 @@ section {
 .contact-container {
   display: flex;
   padding-top: 3.5rem;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .contact-container .left-contact {
   flex: 2;
