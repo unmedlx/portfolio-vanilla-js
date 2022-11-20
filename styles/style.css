@@ -586,7 +586,6 @@ section {
 .contact-container {
   display: flex;
   padding-top: 3.5rem;
-  transition: all 0.3s ease-in-out;
 }
 .contact-container .left-contact {
   flex: 2;
