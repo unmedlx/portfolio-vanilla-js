@@ -2,7 +2,6 @@
 .contact-container {
   display: flex;
   padding-top: 3.5rem;
-  transition: all 0.3s ease-in-out;
 
   .left-contact {
     flex: 2;
@@ -19,13 +18,10 @@
       .contact-item {
         display: flex;
         align-items: center;
-        // transition: all 0.4s ease-in-out;
         p {
           margin: 0.3rem 0.4rem;
-          // transition: all 0.4s ease-in-out;
         }
         .icon {
-          // transition: all 0.4s ease-in-out;
           display: grid;
           grid-template-columns: 1fr;
           padding: 1rem;
